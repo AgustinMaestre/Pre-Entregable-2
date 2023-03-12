@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', true);
 const productSchema = mongoose.Schema({
     title: { type: String, required: [true, "El campo title es requerido"] },
     description: { type: String, required: [true, "El campo description es requerido"] },

@@ -5,6 +5,8 @@ const mongoDbProductContainer = require('./product.dao')
 const productSchema = require('./model/product')
 const productDAO = new mongoDbProductContainer('products', productSchema)
 
+mongoose.set('strictQuery', true);
+
 mongoose.connect(conection, error => {
     if (error) {
         console.log('Cannot connect to db')
